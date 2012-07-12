@@ -2,3 +2,7 @@ This is a test. Do not panic. This is only a test.
 
 These are the "live" slides.
 https://docs.google.com/presentation/d/1t1QPZlrAKLB94iSrPhvMONAai62rGteiJDI_BFydYJs/edit
+
+This project uses:
+Restlet (restlet.org)
+Jazzy (jazzy.sourceforge.net)
