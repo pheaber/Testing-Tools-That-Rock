@@ -4,6 +4,9 @@
 	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="lib" path="lib/jazzy-core.jar"/>
 	<classpathentry kind="lib" path="lib/org.restlet.jar"/>
+	<classpathentry kind="lib" path="lib/org.codehaus.jackson.core.jar"/>
+	<classpathentry kind="lib" path="lib/org.codehaus.jackson.mapper.jar"/>
+	<classpathentry kind="lib" path="lib/org.restlet.ext.jackson.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
