@@ -6,6 +6,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.restlet.resource.ClientResource;
+import org.restlet.resource.ResourceException;
 
 import spelling.Word;
 import spelling.common.WordChecker;
@@ -34,6 +35,13 @@ public class SpellCheckerTest {
         assertNotNull(checkedWord);
         assertEquals("tesing", checkedWord.getWord());
         assertEquals("teasing", checkedWord.getSuggestions().get(0));
+    }
+
+    @Test(expected = ResourceException.class)
+    public void checkCannotConnectToServer() {
+        SpellChecker speller = getSpellChecker("tesing");
+
+        speller.check();
     }
 
     private static SpellChecker getSpellChecker(String testWord) {
