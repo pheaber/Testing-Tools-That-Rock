@@ -29,7 +29,7 @@ public class ParameterizedExamples {
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] { //
-                { 1, 1, 2 }, //
+                { 1, 1, 3 }, // this piece of bad data fails, but the rest will still be tried!
                         { 2, 6, 8 }, //
                         { 9, 3, 12 } //
                 });
