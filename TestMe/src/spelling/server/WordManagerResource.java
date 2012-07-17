@@ -51,6 +51,7 @@ public class WordManagerResource extends ServerResource implements WordChecker {
         String threadName = Thread.currentThread().getName();
         System.out.println(threadName + ": Checking " + this.word);
 
+        // if the word is misspelled, add some helpful suggestions
         if (!SPELL_CHECKER.isCorrect(this.word)) {
             @SuppressWarnings("unchecked")
             List<com.swabunga.spell.engine.Word> suggestions = SPELL_CHECKER.getSuggestions(this.word, 5);
