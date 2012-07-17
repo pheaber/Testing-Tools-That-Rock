@@ -1,22 +1,15 @@
 package org.ojug.junit;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-
-public class SimpleStringList implements List<String> {
+public class SimpleStringList {
 
     private String[] data = new String[16];
 
     /* package */int count = 0;
 
-    @Override
     public boolean isEmpty() {
         return this.count == 0;
     }
 
-    @Override
     public boolean add(String element) {
         if (this.count == this.data.length) {
             // double the size, then copy the data to the new array
@@ -29,7 +22,6 @@ public class SimpleStringList implements List<String> {
         return false;
     }
 
-    @Override
     public String get(int index) {
         if ((this.count == 0) || (index > this.count)) {
             throw new IndexOutOfBoundsException("Asking for too much: " + index);
@@ -47,106 +39,8 @@ public class SimpleStringList implements List<String> {
         } catch (InterruptedException e) {
             System.out.println("Oh no! I was interrupted!");
         }
-    }
 
-    @Override
-    public void add(int index, String element) {
-
-    }
-
-    @Override
-    public boolean addAll(Collection<? extends String> collection) {
-        return false;
-    }
-
-    @Override
-    public boolean addAll(int index, Collection<? extends String> collection) {
-        return false;
-    }
-
-    @Override
-    public void clear() {
-
-    }
-
-    @Override
-    public boolean contains(Object element) {
-        return false;
-    }
-
-    @Override
-    public boolean containsAll(Collection<?> collection) {
-        return false;
-    }
-
-    @Override
-    public int indexOf(Object element) {
-        return 0;
-    }
-
-    @Override
-    public Iterator<String> iterator() {
-        return null;
-    }
-
-    @Override
-    public int lastIndexOf(Object element) {
-        return 0;
-    }
-
-    @Override
-    public ListIterator<String> listIterator() {
-        return null;
-    }
-
-    @Override
-    public ListIterator<String> listIterator(int index) {
-        return null;
-    }
-
-    @Override
-    public boolean remove(Object element) {
-        return false;
-    }
-
-    @Override
-    public String remove(int index) {
-        return null;
-    }
-
-    @Override
-    public boolean removeAll(Collection<?> collection) {
-        return false;
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> collection) {
-        return false;
-    }
-
-    @Override
-    public String set(int index, String element) {
-        return null;
-    }
-
-    @Override
-    public int size() {
-        return 0;
-    }
-
-    @Override
-    public List<String> subList(int fromIndex, int toIndex) {
-        return null;
-    }
-
-    @Override
-    public Object[] toArray() {
-        return null;
-    }
-
-    @Override
-    public <T> T[] toArray(T[] array) {
-        return null;
+        System.out.println("I finished thinking");
     }
 
 }
