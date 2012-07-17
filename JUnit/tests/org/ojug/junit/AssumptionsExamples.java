@@ -13,6 +13,9 @@ import java.util.Arrays;
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
+/**
+ * Examples of JUnit Assume. http://junit.sourceforge.net/javadoc/org/junit/Assume.html
+ */
 public class AssumptionsExamples {
 
     @Test
